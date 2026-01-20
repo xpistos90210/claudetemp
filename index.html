@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#000000">
+    <title>Asteroids</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="overlay">
+            <h1>ASTEROIDS</h1>
+            <p class="subtitle">Touch to Play</p>
+            <div class="instructions">
+                <p>🎮 Left side: Rotate</p>
+                <p>🚀 Right side: Thrust & Fire</p>
+            </div>
+            <button id="start-btn">START GAME</button>
+        </div>
+
+        <!-- Game Over Screen -->
+        <div id="game-over" class="overlay hidden">
+            <h1>GAME OVER</h1>
+            <p class="final-score">Score: <span id="final-score">0</span></p>
+            <p class="high-score">High Score: <span id="high-score">0</span></p>
+            <button id="restart-btn">PLAY AGAIN</button>
+        </div>
+
+        <!-- HUD -->
+        <div id="hud">
+            <div class="score">SCORE: <span id="score">0</span></div>
+            <div class="lives" id="lives"></div>
+        </div>
+
+        <!-- Touch Controls -->
+        <div id="controls">
+            <div id="left-zone" class="control-zone">
+                <div class="control-btn" id="rotate-left">◀</div>
+                <div class="control-btn" id="rotate-right">▶</div>
+            </div>
+            <div id="right-zone" class="control-zone">
+                <div class="control-btn" id="thrust">▲</div>
+                <div class="control-btn" id="fire">●</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
